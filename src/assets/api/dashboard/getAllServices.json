@@ -1,0 +1,76 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		},
+		{
+			"id": 2,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Help"
+		},
+		{
+			"id": 3,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Architect & Interior"
+		},
+		{
+			"id": 4,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Gardening & Landscaping"
+		},
+		{
+			"id": 5,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Repair"
+		},
+		{
+			"id": 6,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Appliance Repair"
+		},
+		{
+			"id": 7,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Computer Repair"
+		},
+		{
+			"id": 8,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Pest Control"
+		},
+		{
+			"id": 9,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Cleaning"
+		},
+		{
+			"id": 10,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		},
+		{
+			"id": 11,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		},
+		{
+			"id": 12,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		},
+		{
+			"id": 13,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		},
+		{
+			"id": 14,
+			"image": "../assets/dummy-square.jpg",
+			"name": "Home Improvement"
+		}
+	],
+	"statusCode": 200,
+	"message": "success"
+}

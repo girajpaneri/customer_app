@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>
+			<img src="../../assets/Icon.png" width="35px" class="ion-float-left">
+			<ion-text class="ion-float-left dashboard-text"> Dashboard</ion-text>
+			<ion-icon name="notifications-outline" class="bellFont ion-float-right"></ion-icon>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-searchbar></ion-searchbar>
+		</ion-toolbar>
+	</ion-header>
+
+	<!-- slides -->
+	<ion-slides pager="true" [options]="slideOpts">
+		<ion-slide>
+			<h1>Slide 1</h1>
+		</ion-slide>
+		<ion-slide>
+			<h1>Slide 2</h1>
+		</ion-slide>
+		<ion-slide>
+			<h1>Slide 3</h1>
+		</ion-slide>
+	</ion-slides>
+
+	<!-- grid -->
+	<ion-grid class="ion-text-center" fixed="true">
+		<ion-row class="ion-justify-content-start ion-wrap ion-align-items-start">
+			<ion-col class="columnStyle ion-padding-vertical ion-align-self-auto" *ngFor="let subCat of allSubCatList">
+				<div class="mb-10">
+					<img [src]="subCat.photo" width="40">
+				</div>
+				<div>{{subCat.name}}</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>
