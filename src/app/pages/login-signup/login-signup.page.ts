@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/shared/services/authentication.service';
 import { SubSink } from 'subsink';
-import { ApiServiceService } from '../shared/services/api-service.service';
-import { AuthenticationService } from '../shared/services/authentication.service';
 
 @Component({
 	selector: 'app-login-signup',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiServiceService } from 'src/app/shared/services/api-service.service';
 import { SubSink } from 'subsink';
-import { ApiServiceService } from '../shared/services/api-service.service';
 import * as _ from 'underscore';
 
 @Component({
