@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ValidateOtpPage implements OnInit {
 
 	searchModel: any = {};
+	submitted: boolean = false;
 	constructor() { }
 
 	ngOnInit() {
 	}
 
 	onSubmit() {
-
+		this.submitted = true;
 	}
 
 }

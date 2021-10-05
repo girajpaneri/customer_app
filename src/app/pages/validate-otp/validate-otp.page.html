@@ -13,36 +13,46 @@
 	<div class="homescreen-content" scroll="false">
 		<form novalidate (ngSubmit)="validateOTP.form.valid && onSubmit()" #validateOTP="ngForm">
 			<!-- upper div  -->
-			<div>
+			<div class="a">
 				<ion-title class="ion-text-center enterOtp">Enter OTP</ion-title>
 				<ion-title class="ion-text-center sendOtp">OTP send to +91 9999999999</ion-title>
 
 				<ion-row>
 					<ion-col>
-						<ion-item class="item item-text-wrap">
-							<ion-input type="text" name="otp1" required [(ngModel)]="searchModel.otp1" size="3">
+						<ion-item class="item item-text-wrap w-45">
+							<ion-input type="text" name="otp1" maxlength="1" #otp1="ngModel" required
+								[(ngModel)]="searchModel.otp1">
 							</ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col>
-						<ion-item lines="full">
-							<ion-input type="text" name="otp2" required [(ngModel)]="searchModel.otp2">
+						<ion-item class="item item-text-wrap w-45">
+							<ion-input type="text" name="otp2" maxlength="1" required #otp2="ngModel"
+								[(ngModel)]="searchModel.otp2">
 							</ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col>
-						<ion-item lines="full">
-							<ion-input type="text" name="otp3" required [(ngModel)]="searchModel.otp3">
+						<ion-item class="item item-text-wrap w-45">
+							<ion-input type="text" name="otp3" maxlength="1" required #otp3="ngModel"
+								[(ngModel)]="searchModel.otp3">
 							</ion-input>
 						</ion-item>
 					</ion-col>
 					<ion-col>
-						<ion-item lines="full">
-							<ion-input type="text" name="otp3" required [(ngModel)]="searchModel.otp3">
+						<ion-item class="item item-text-wrap w-45">
+							<ion-input type="text" name="otp4" maxlength="1" required #otp4="ngModel"
+								[(ngModel)]="searchModel.otp4">
 							</ion-input>
 						</ion-item>
 					</ion-col>
 				</ion-row>
+				<ion-text color="danger">
+					<p [hidden]="(otp1.valid && otp2.valid && otp3.valid && otp4.valid) || submitted == false"
+						class="ion-padding-start">
+						OTP is required
+					</p>
+				</ion-text>
 
 				<!-- <ion-item class="item item-text-wrap">
 					<ion-input type="text" name="otp1" required [(ngModel)]="searchModel.otp1" size="3">
@@ -65,7 +75,7 @@
 
 			<!-- <hr> -->
 			<!-- lower div  -->
-			<div>
+			<div class="a">
 				<!-- <form novalidate (ngSubmit)="validateOTP.form.valid && onSubmit()" #validateOTP="ngForm"> -->
 				<!-- <ion-item lines="full">
 					<ion-input type="text" name="mobileEmail" required placeholder="Mobile or Email"

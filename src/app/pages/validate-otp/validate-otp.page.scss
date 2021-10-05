@@ -13,13 +13,18 @@
 	height: 100vh; /* 100% of the viewport height */
 }
 
-.homescreen-content > div {
+.homescreen-content > form > div {
 	display: flex;
 	justify-content: center; /* horizontally centered */
 	align-items: center; /* vertically centered */
 	flex: 1; /* each stretches and takes equal height of the parent (50vh) */
+	flex-direction: column;
 }
 
 .loginBtn {
 	background-color: #561d5e;
+}
+
+.w-45 {
+	width: 45px;
 }
