@@ -1,0 +1,109 @@
+<ion-header>
+	<ion-toolbar color="custom">
+		<ion-buttons slot="start">
+			<ion-button (click)="back()">
+				<!-- <ion-icon slot="icon-only" name="arrow-back"></ion-icon> -->
+				<ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>Registration</ion-title>
+	</ion-toolbar>
+	<!-- <ion-searchbar [placeholder]="'Search by restaurant'" mode="ios"></ion-searchbar> -->
+</ion-header>
+
+<ion-content>
+	<!-- name -->
+	<ion-item>
+		<ion-input [placeholder]="'Enter your name'" required type="text" name="fullname" #fullname="ngModel"
+			[(ngModel)]="registration.name">
+		</ion-input>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="fullname.valid || submitted == false" class="ion-padding-start">
+			Name is required
+		</p>
+	</ion-text>
+
+	<!-- mobile number -->
+	<ion-item>
+		<ion-input [placeholder]="'Mobile Number'" required type="text" name="mobileNumber" #mobile="ngModel"
+			[(ngModel)]="registration.moible">
+		</ion-input>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="mobile.valid || submitted == false" class="ion-padding-start">
+			Mobile Number is required
+		</p>
+	</ion-text>
+
+	<!-- email id -->
+	<ion-item>
+		<ion-input [placeholder]="'Email Id'" email required type="text" name="emailId" #emailId="ngModel"
+			[(ngModel)]="registration.emailId">
+		</ion-input>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="emailId.valid || submitted == false" class="ion-padding-start">
+			EmailId is required
+		</p>
+	</ion-text>
+
+	<!-- state -->
+	<ion-item>
+		<!-- <ion-input [placeholder]="'Enter your name'" required type="text" name="fullname" #fullname="ngModel"
+			[(ngModel)]="registration.name">
+		</ion-input> -->
+		<ion-select okText="Okay" cancelText="Dismiss" interface="popover" [(ngModel)]="registration.stateId"
+			name="state" #state="ngModel" required [placeholder]="'State'">
+			<ion-select-option [value]="1"> Rajasthan</ion-select-option>
+			<ion-select-option [value]="2"> Maharastra</ion-select-option>
+			<ion-select-option [value]="3"> Gujrat</ion-select-option>
+			<ion-select-option [value]="4"> Punjab</ion-select-option>
+			<ion-select-option [value]="5"> Bihar</ion-select-option>
+		</ion-select>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="state.valid || submitted == false" class="ion-padding-start">
+			State is required
+		</p>
+	</ion-text>
+
+	<!-- city -->
+	<ion-item>
+		<ion-select okText="Okay" cancelText="Dismiss" interface="popover" [(ngModel)]="registration.cityId" name="city"
+			#city="ngModel" required [placeholder]="'City'">
+			<ion-select-option [value]="1"> Udaipur</ion-select-option>
+			<ion-select-option [value]="2"> Jodhpur</ion-select-option>
+			<ion-select-option [value]="3"> Jaipur</ion-select-option>
+			<ion-select-option [value]="4"> Chandigarh</ion-select-option>
+			<ion-select-option [value]="5"> Ahmedabad</ion-select-option>
+		</ion-select>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="city.valid || submitted == false" class="ion-padding-start">
+			City is required
+		</p>
+	</ion-text>
+
+	<!-- address -->
+	<ion-item>
+		<ion-textarea rows="6" cols="20" [placeholder]="'Current Address : '" required name="currentAddress"
+			#currentAddress="ngModel" [(ngModel)]="registration.currentAddress"></ion-textarea>
+	</ion-item>
+	<ion-text color="danger">
+		<p [hidden]="currentAddress.valid || submitted == false" class="ion-padding-start">
+			Current Address is required
+		</p>
+	</ion-text>
+
+	<div class="div_chk">
+		<ion-checkbox [checked]="registration.check" [(ngModel)]="registration.check" name="checkls" #checkls="ngModel"
+			color="light" class="chk"></ion-checkbox>
+		<ion-label class="lbl_police"><span class="span_term">
+				{{'I Accept the Terms and Conditions'}}
+			</span>
+		</ion-label>
+	</div>
+
+	<ion-button (click)="submit()" class="loginBtn" color="custom" expand="block"> {{'Submit'}} </ion-button>
+</ion-content>

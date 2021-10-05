@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { AuthenticationService } from 'src/app/shared/services/authentication.service';
 import { SubSink } from 'subsink';
 
@@ -13,24 +14,19 @@ export class LoginSignupPage implements OnInit {
 	searchModel: any = {};
 	constructor(
 		private authService: AuthenticationService,
-		private router: Router
+		private navCtrl: NavController
 	) { }
 
 	ngOnInit() { }
 
 	onSubmit() {
 		this.sub.sink = this.authService.login(this.searchModel).subscribe(res => {
-
-			console.log('res in login component')
-			console.log(res)
-
 			if (res == true) {
 				console.log('here in true')
-				// this.router.navigate(['/']);
-				this.router.navigate(['/validate-otp']);
+				this.navCtrl.navigateRoot(['validate-otp']);
 			}
 			else {
-				this.router.navigate(['/login']);
+				this.navCtrl.navigateRoot(['login']);
 			}
 		});
 	}

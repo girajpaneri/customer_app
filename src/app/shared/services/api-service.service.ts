@@ -14,5 +14,9 @@ export class ApiServiceService {
 		return this.http.get(environment.apiUrl + '/subcategories/webfind');
 	}
 
+	validateOtp(userModel: any): Observable<any> {
+		return this.http.get(environment.localApiUrl + '/validateOtp.json');
+	}
+
 
 }
