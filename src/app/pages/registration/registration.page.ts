@@ -18,13 +18,15 @@ export class RegistrationPage implements OnInit {
 	}
 
 	back() {
-		this.navCtrl.back();
+		// this.navCtrl.back();
+		this.navCtrl.pop();
 	}
 
 	submit() {
 		this.submitted = true;
 		console.log('this.registration')
 		console.log(this.registration)
+		// this.navCtrl.navigateRoot('');
 	}
 
 }

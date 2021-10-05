@@ -27,7 +27,7 @@
 	<!-- mobile number -->
 	<ion-item>
 		<ion-input [placeholder]="'Mobile Number'" required type="text" name="mobileNumber" #mobile="ngModel"
-			[(ngModel)]="registration.moible">
+			[(ngModel)]="registration.mobile">
 		</ion-input>
 	</ion-item>
 	<ion-text color="danger">
@@ -97,13 +97,14 @@
 	</ion-text>
 
 	<div class="div_chk">
-		<ion-checkbox [checked]="registration.check" [(ngModel)]="registration.check" name="checkls" #checkls="ngModel"
-			color="light" class="chk"></ion-checkbox>
+		<ion-checkbox [checked]="registration.check" [(ngModel)]="registration.check" required name="checkls"
+			#checkls="ngModel" color="light" class="chk"></ion-checkbox>
 		<ion-label class="lbl_police"><span class="span_term">
-				{{'I Accept the Terms and Conditions'}}
+				I Accept the Terms and Conditions
 			</span>
 		</ion-label>
 	</div>
 
-	<ion-button (click)="submit()" class="loginBtn" color="custom" expand="block"> {{'Submit'}} </ion-button>
+
+	<ion-button (click)="submit()" class="loginBtn" color="custom" expand="block"> Submit </ion-button>
 </ion-content>

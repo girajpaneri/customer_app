@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { ApiServiceService } from 'src/app/shared/services/api-service.service';
 import { SubSink } from 'subsink';
@@ -11,13 +10,12 @@ import { SubSink } from 'subsink';
 })
 export class ValidateOtpPage implements OnInit {
 	private sub = new SubSink();
-
 	searchModel: any = {};
 	submitted: boolean = false;
+
 	constructor(
 		private apiService: ApiServiceService,
-		private router: Router,
-		private navCtrl: NavController,
+		public navCtrl: NavController,
 	) { }
 
 	ngOnInit() {
