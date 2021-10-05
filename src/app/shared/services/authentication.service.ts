@@ -32,11 +32,6 @@ export class AuthenticationService {
 			console.log(currentUser)
 			this.authState.next(true);
 		}
-		// this.storage.get('currentUser').then((response) => {
-		// 	if (response) {
-		// this.authState.next(true);
-		// 	}
-		// });
 	}
 
 

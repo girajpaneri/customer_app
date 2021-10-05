@@ -11,14 +11,13 @@ const routes: Routes = [
 		loadChildren: () => import('./pages/login-signup/login-signup.module').then(m => m.LoginSignupPageModule)
 	},
 	{
+		path: 'validate-otp',
+		loadChildren: () => import('./pages/validate-otp/validate-otp.module').then(m => m.ValidateOtpPageModule)
+	}, {
 		path: '',
 		redirectTo: '',
 		pathMatch: 'full'
 	},
-	{
-		path: 'validate-otp',
-		loadChildren: () => import('./pages/validate-otp/validate-otp.module').then(m => m.ValidateOtpPageModule)
-	}
 ];
 @NgModule({
 	imports: [

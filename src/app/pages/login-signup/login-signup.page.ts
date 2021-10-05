@@ -27,6 +27,7 @@ export class LoginSignupPage implements OnInit {
 			if (res == true) {
 				console.log('here in true')
 				// this.router.navigate(['/']);
+				this.router.navigate(['/validate-otp']);
 			}
 			else {
 				this.router.navigate(['/login']);
