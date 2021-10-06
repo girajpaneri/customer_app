@@ -18,8 +18,8 @@ export class RegistrationPage implements OnInit {
 	}
 
 	back() {
-		// this.navCtrl.back();
-		this.navCtrl.pop();
+		this.navCtrl.back();
+		// this.navCtrl.pop();
 	}
 
 	submit() {

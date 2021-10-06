@@ -30,15 +30,15 @@ const routes: Routes = [
 			}
 		]
 	},
-	// {
-	// 	path: '',
-	// 	redirectTo: 'tabs',
-	// 	pathMatch: 'full'
-	// }
 	{
 		path: '',
-		loadChildren: () => import('../login-signup/login-signup-routing.module').then(m => m.LoginSignupPageRoutingModule)
+		redirectTo: 'tabs',
+		pathMatch: 'full'
 	}
+	// {
+	// 	path: '',
+	// 	loadChildren: () => import('../login-signup/login-signup-routing.module').then(m => m.LoginSignupPageRoutingModule)
+	// }
 ];
 
 @NgModule({

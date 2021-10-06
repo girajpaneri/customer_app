@@ -5,8 +5,8 @@
 export const environment = {
 	production: false,
 	localApiUrl: location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + '/assets/api',
-	// apiUrl: 'https://jobbanko.com/api/api',
-	apiUrl: 'https://naklibeta.com/api/api',
+	apiUrl: 'https://jobbanko.com/api/api',
+	// apiUrl: 'https://naklibeta.com/api/api',
 	// localImageUrl: location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + '/assets/img',
 };
 

@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
 	<ion-toolbar>
 		<ion-title>
 			<img src="../../assets/Icon.png" width="35px" class="ion-float-left">
@@ -6,14 +6,28 @@
 			<ion-icon name="notifications-outline" class="bellFont ion-float-right"></ion-icon>
 		</ion-title>
 	</ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true">
+	<ion-toolbar color="custom">
+		<ion-buttons slot="start">
+			<!-- <ion-img src="../../assets/Icon.png" width="35"></ion-img> -->
+			<img src="../../assets/Icon.png" width="35px" class="ion-float-left ion-margin-start">
+		</ion-buttons>
+		<ion-title class="ion-float-left dashboard-text">Dashboard</ion-title>
+		<ion-icon name="notifications-outline" class="bellFont ion-float-right ion-margin-end"></ion-icon>
+	</ion-toolbar>
+	<!-- <ion-searchbar [placeholder]="'Search by restaurant'" mode="ios"></ion-searchbar> -->
 </ion-header>
 
+
+
 <ion-content [fullscreen]="true">
-	<ion-header collapse="condense">
-		<ion-toolbar>
-			<ion-searchbar></ion-searchbar>
-		</ion-toolbar>
-	</ion-header>
+	<!-- <ion-header collapse="condense"> -->
+	<!-- <ion-toolbar> -->
+	<ion-searchbar showCancelButton="always"></ion-searchbar>
+	<!-- </ion-toolbar> -->
+	<!-- </ion-header> -->
 
 	<!-- slides -->
 	<ion-slides pager="true" [options]="slideOpts">
