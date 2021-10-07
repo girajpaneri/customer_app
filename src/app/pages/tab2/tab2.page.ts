@@ -15,4 +15,8 @@ export class Tab2Page {
 	back() {
 		this.navCtrl.back();
 	}
+
+	servicesDetails(){
+		this.navCtrl.navigateForward['/services-details']
+	}
 }

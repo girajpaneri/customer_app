@@ -6,6 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+    children:[
+      {
+        path:'services-details',
+        component:servicesDetails
+      }
+    ]
   }
 ];
 

@@ -1,12 +1,3 @@
-<!-- <ion-header [translucent]="true">
-	<ion-toolbar>
-		<ion-title>
-			Tab 2
-		</ion-title>
-	</ion-toolbar>
-</ion-header> -->
-
-
 <ion-header>
 	<ion-toolbar color="custom">
 		<ion-buttons slot="start">
@@ -15,16 +6,136 @@
 			</ion-button>
 		</ion-buttons>
 		<ion-title>Services</ion-title>
-		<!-- <ion-icon name="notifications-outline" class="bellFont ion-float-right ion-margin-end"></ion-icon> -->
 	</ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
-	<ion-header collapse="condense">
-		<ion-toolbar>
-			<ion-title size="large">Tab 2</ion-title>
+	<ion-header>
+		<ion-toolbar color="custom">
+			<ion-title slot="start">Our Services</ion-title>
+			<ion-title slot="end">Sort by
+				<ion-icon name="chevron-down-outline"></ion-icon>
+				<!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
+			</ion-title>
 		</ion-toolbar>
 	</ion-header>
+
+	<ion-card (click)="servicesDetails()">
+		<ion-card-content>
+			<ion-row>
+				<ion-col size="3">
+					<img src="../../../assets/dummy-square.jpg">
+				</ion-col>
+				<ion-col size="9">
+					<ion-row>
+						<ion-col size="8">
+							<h4>Home Deep Cleaning</h4>
+						</ion-col>
+						<ion-col size="4">
+							<h4>2000/-</h4>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<p style="font-size: 9px;">
+								Keep close to Nature's heart... and break clear away, once in awhile,
+								and climb a mountain or spend a week in the woods. Wash your spirit clean.
+							</p>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col size="5">
+							<p style="font-size: 10px;">Date: 06-10-2021</p>
+						</ion-col>
+
+						<ion-col size="7">
+							<ion-button size="small" color="custom" class="loginBtn" style="font-size: 12px;">Book Now
+								<ion-icon name="call-outline"></ion-icon>
+							</ion-button>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-content>
+			<ion-row>
+				<ion-col size="3">
+					<img src="../../../assets/dummy-square.jpg">
+				</ion-col>
+				<ion-col size="9">
+					<ion-row>
+						<ion-col size="8">
+							<h4>Basic Home Cleaning</h4>
+						</ion-col>
+						<ion-col size="4">
+							<h4>2000/-</h4>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<p style="font-size: 9px;">
+								Keep close to Nature's heart... and break clear away, once in awhile,
+								and climb a mountain or spend a week in the woods. Wash your spirit clean.
+							</p>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col size="5">
+							<p style="font-size: 10px;">Date: 06-10-2021</p>
+						</ion-col>
+
+						<ion-col size="7">
+							<ion-button size="small" color="custom" class="loginBtn" style="font-size: 12px;">Book Now
+								<ion-icon name="call-outline"></ion-icon>
+							</ion-button>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-card>
+		<ion-card-content>
+			<ion-row>
+				<ion-col size="3">
+					<img src="../../../assets/dummy-square.jpg">
+				</ion-col>
+				<ion-col size="9">
+					<ion-row>
+						<ion-col size="8">
+							<h4>Bathroom Cleaning</h4>
+						</ion-col>
+						<ion-col size="4">
+							<h4>2000/-</h4>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<p style="font-size: 9px;">
+								Keep close to Nature's heart... and break clear away, once in awhile,
+								and climb a mountain or spend a week in the woods. Wash your spirit clean.
+							</p>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col size="5">
+							<p style="font-size: 10px;">Date: 06-10-2021</p>
+						</ion-col>
+
+						<ion-col size="7">
+							<ion-button size="small" color="custom" class="loginBtn" style="font-size: 12px;">Book Now
+								<ion-icon name="call-outline"></ion-icon>
+							</ion-button>
+						</ion-col>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+		</ion-card-content>
+	</ion-card>
 
 </ion-content>

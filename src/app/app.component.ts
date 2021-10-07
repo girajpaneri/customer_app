@@ -19,7 +19,7 @@ export class AppComponent {
 		private statusBar: StatusBar,
 		private authService: AuthenticationService
 	) {
-		this.initializeApp();
+		//this.initializeApp();
 	}
 
 	initializeApp() {

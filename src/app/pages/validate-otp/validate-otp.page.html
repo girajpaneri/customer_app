@@ -1,23 +1,13 @@
-<ion-header [translucent]="true">
-	<ion-toolbar>
-		<ion-title>
-			<ion-icon name="chevron-back-outline" routerLink="/login"></ion-icon>
-		</ion-title>
-	</ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-	<!-- <ion-title>
-		<ion-icon name="chevron-back-outline"></ion-icon>
-	</ion-title> -->
-	<div class="homescreen-content" scroll="false">
-		<form novalidate (ngSubmit)="validateOTP.form.valid && onSubmit()" #validateOTP="ngForm">
-			<!-- upper div  -->
-			<div class="a">
+	<form novalidate (ngSubmit)="validateOTP.form.valid && onSubmit()" #validateOTP="ngForm">
+		<div class="logo-bg" style="min-height: 330px; max-height: 330px;">
+			<ion-title style="padding-top: 20px;">
+				<ion-icon name="chevron-back-outline" routerLink="/login"></ion-icon>
+			</ion-title>
+			<div>
 				<ion-title class="ion-text-center enterOtp">Enter OTP</ion-title>
 				<ion-title class="ion-text-center sendOtp">OTP send to +91 9999999999</ion-title>
-
-				<ion-row>
+				<ion-row style="margin: 20% 10%;">
 					<ion-col>
 						<ion-item class="item item-text-wrap w-45">
 							<ion-input type="text" name="otp1" maxlength="1" #otp1="ngModel" required
@@ -54,20 +44,15 @@
 					</p>
 				</ion-text>
 			</div>
-			<!-- upper div  -->
-
-			<!-- lower div  -->
-			<div class="a">
-				<ion-row>
-					<ion-col>
-						<ion-button type="submit" color="custom" expand="block" class="loginBtn">
-							Verify OTP
-						</ion-button>
-					</ion-col>
-				</ion-row>
-			</div>
-			<!-- lower div  -->
-
-		</form>
-	</div>
+		</div>
+		<div>
+			<ion-row style="margin-top: 70%;">
+				<ion-col>
+					<ion-button type="submit" color="custom" expand="block" class="loginBtn">
+						Verify OTP
+					</ion-button>
+				</ion-col>
+			</ion-row>
+		</div>
+	</form>
 </ion-content>
